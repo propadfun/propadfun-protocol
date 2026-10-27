@@ -1,0 +1,40 @@
+{
+  "ca": {
+    "state": "absent",
+    "label": "Contract address",
+    "note": "client has not stated one",
+    "checked": "2026-10-27"
+  },
+  "x": {
+    "state": "absent",
+    "label": "X",
+    "note": "client has not stated one",
+    "checked": "2026-10-27"
+  },
+  "github": {
+    "state": "absent",
+    "label": "GitHub",
+    "note": "client has not stated one",
+    "checked": "2026-10-27"
+  },
+  "chain": {
+    "state": "stated",
+    "label": "Network",
+    "value": "Solana",
+    "rpc": "https://solana-rpc.publicnode.com",
+    "source": "client statement",
+    "scope": "batch-level",
+    "checked": "2026-10-27"
+  },
+  "market": {
+    "state": "stated",
+    "label": "Market source",
+    "value": "DexScreener",
+    "url": "https://api.dexscreener.com/token-boosts/top/v1",
+    "pairsUrl": "https://api.dexscreener.com/tokens/v1/solana/{addresses}",
+    "chainId": "solana",
+    "source": "client statement",
+    "scope": "batch-level",
+    "checked": "2026-10-27"
+  }
+}

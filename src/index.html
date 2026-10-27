@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Propad | A level start on Solana</title>
+<meta name="description" content="Propad is a Solana pad built around equal footing, original names and revenue that feeds the loop for the projects it serves.">
+<meta name="theme-color" content="%%THEME%%">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://propad.fun/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta property="og:title" content="Propad | A level start on Solana">
+<meta property="og:description" content="Equal footing, original names, revenue that feeds the loop.">
+<meta property="og:url" content="https://propad.fun/">
+<meta property="og:site_name" content="Propad">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://propad.fun/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://propad.fun/assets/og.png">
+<link rel="preload" as="image" href="assets/logo.png">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/styles.css">
+<script>
+  document.documentElement.classList.add('js');
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('rm');
+</script>
+<script type="module" src="js/main.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Jump to main section</a>
+<div id="progress" class="progress" aria-hidden="true"></div>
+<p id="live-note" class="sr-only" role="status" aria-live="polite"></p>
+
+<header class="topbar">
+  <div class="wrap bar">
+    <a class="brand" href="./" aria-label="Propad, top of page">
+      <img src="assets/logo-128.png" width="32" height="32" alt="" decoding="async">
+      <span>Propad</span>
+    </a>
+    <nav class="socials" id="social" aria-label="Social links"><!--slot:social--></nav>
+  </div>
+  <div class="wrap ca-wrap" id="ca-slot"><!--slot:ca--></div>
+</header>
+
+<main id="main">
+  <section class="hero" id="hero">
+    <div class="bg" aria-hidden="true">
+      <div class="stars" data-depth="0.03"></div>
+      <div class="mesh" data-depth="0.05"><i></i><i></i><i></i></div>
+      <div class="glow" data-depth="0.09"></div>
+      <svg class="curve" data-depth="0.04" viewBox="0 0 1440 900" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="curve-grad" x1="0" y1="1" x2="1" y2="0">
+            <stop offset="0" class="s0"/><stop offset="0.45" class="s1"/><stop offset="1" class="s2"/>
+          </linearGradient>
+        </defs>
+        <path class="curve-path" pathLength="1" d="M -40 820 C 420 700, 900 560, 1180 260 S 1440 -40, 1500 -80" fill="none" stroke="url(#curve-grad)" stroke-width="1.25" vector-effect="non-scaling-stroke"/>
+      </svg>
+    </div>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <h1 class="rise" style="--d:0ms">A level floor for new Solana projects.</h1>
+        <p class="lede rise" style="--d:80ms">Equal footing at the opening bell, lookalike names filtered out, and swap revenue recycled into repurchases and supply removal.</p>
+        <div class="cta rise" style="--d:160ms">
+          <a class="btn btn-primary" href="#market">Watch the market
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a>
+          <a class="btn btn-ghost" href="#principles">Read the principles</a>
+        </div>
+        <p class="net rise" style="--d:240ms"><span class="net-label">Network</span><span class="net-val">%%CHAIN%%</span></p>
+      </div>
+      <div class="hero-art rise" style="--d:120ms">
+        <img src="assets/logo.png" width="640" height="640" alt="Propad emblem: four chevrons around a central diamond" fetchpriority="high" decoding="async">
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker" id="ticker" role="region" aria-label="Market ticker" tabindex="0">
+    <div class="ticker-track" id="ticker-track">
+      <span class="tick-set"><span class="tick skel-tick"></span><span class="tick skel-tick"></span><span class="tick skel-tick"></span><span class="tick skel-tick"></span><span class="tick skel-tick"></span><span class="tick skel-tick"></span></span>
+    </div>
+  </div>
+
+  <section class="wrap sec" id="market" aria-labelledby="market-h">
+    <div class="sec-head" data-reveal>
+      <div>
+        <h2 id="market-h">Market pulse</h2>
+        <p class="sub">The ten busiest Solana pairs by 24h volume, via %%MARKET%%.</p>
+      </div>
+      <p class="pill" id="status-pill" data-status="loading"><span class="dot" aria-hidden="true"></span><span id="status-text">Connecting</span></p>
+    </div>
+
+    <div class="stats" data-stagger>
+      <div class="stat panel" data-reveal data-spot><span class="stat-label">Network</span><span class="stat-val">%%CHAIN%%</span></div>
+      <div class="stat panel" data-reveal data-spot><span class="stat-label">Volume, 24h</span><span class="stat-val"><span id="stat-vol" class="skel-line">&nbsp;</span></span></div>
+      <div class="stat panel" data-reveal data-spot><span class="stat-label">Liquidity</span><span class="stat-val"><span id="stat-liq" class="skel-line">&nbsp;</span></span></div>
+      <div class="stat panel" data-reveal data-spot><span class="stat-label">Pairs shown</span><span class="stat-val"><span id="stat-pairs" class="skel-line">&nbsp;</span></span></div>
+    </div>
+
+    <div class="panel table" data-reveal>
+      <div class="table-bar">
+        <div class="tabs" role="tablist" aria-label="Rank by">
+          <button class="tab" role="tab" type="button" data-sort="volume" aria-selected="true">Volume</button>
+          <button class="tab" role="tab" type="button" data-sort="momentum" aria-selected="false" tabindex="-1">Momentum</button>
+          <button class="tab" role="tab" type="button" data-sort="depth" aria-selected="false" tabindex="-1">Depth</button>
+        </div>
+        <p class="note" id="market-note" hidden></p>
+      </div>
+      <div class="row row-head" aria-hidden="true">
+        <span>#</span><span>Asset</span><span>Price</span><span>24h</span><span>Volume</span><span>Liquidity</span><span></span>
+      </div>
+      <ol class="rows" id="rows" aria-busy="true" aria-label="Top pairs">
+        <!--slot:skeleton-->
+      </ol>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="principles" aria-labelledby="pr-h">
+    <div class="sec-head" data-reveal><div><h2 id="pr-h">Principles</h2><p class="sub">Four commitments the pad is designed around.</p></div></div>
+    <div class="cards" data-stagger>
+      <article class="card panel" data-reveal data-spot><span class="card-n">01</span><h3>Level start</h3><p>Nobody gets a private head start. Creators step in at the same price as the crowd.</p></article>
+      <article class="card panel" data-reveal data-spot><span class="card-n">02</span><h3>Original names only</h3><p>Each submission is compared with what already exists, so imitation never reaches the board.</p></article>
+      <article class="card panel" data-reveal data-spot><span class="card-n">03</span><h3>Revenue feeds the loop</h3><p>Swap revenue is routed into repurchases and permanent supply reduction, aimed at supporting a project's long arc.</p></article>
+      <article class="card panel" data-reveal data-spot><span class="card-n">04</span><h3>Figures in plain sight</h3><p>Figures on this page stream from an outside aggregator, never from a hand-edited sheet.</p></article>
+    </div>
+  </section>
+
+  <section class="wrap sec" aria-labelledby="rec-h">
+    <div class="sec-head" data-reveal><div><h2 id="rec-h">Record board</h2><p class="sub">Each outside fact gets one entry. Unconfirmed entries stay dormant.</p></div></div>
+    <ul class="chips" id="board" data-reveal><!--slot:board--></ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <span class="brand foot-brand"><img src="assets/logo-128.png" width="24" height="24" alt=""><span>Propad</span></span>
+    <p>Figures are informational and carry no recommendation. Confirm any address yourself before you transact.</p>
+    <span class="foot-dom">propad.fun</span>
+  </div>
+</footer>
+</body>
+</html>

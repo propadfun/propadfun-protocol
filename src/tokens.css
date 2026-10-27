@@ -1,0 +1,20 @@
+/*
+ * Palette provenance. The only file that may hold colour literals.
+ * Method: k-means (k=6, seed 1) over RGB samples of every file in brand/ and reference/,
+ * each centroid snapped to the nearest real pixel of its source image.
+ * "@px <file> x,y" names that pixel; scripts/gates.mjs re-reads the pixel and compares.
+ * Translucent shades are derived in styles.css with color-mix(), never new literals.
+ */
+:root {
+  --night:   #050521; /* @px reference/PROPAD 1.jpg.jpeg 759,50 */
+  --deep:    #0f0945; /* @px reference/PROPAD 1.jpg.jpeg 1474,650 */
+  --indigo:  #281589; /* @px reference/PROPAD 1.jpg.jpeg 1203,898 */
+  --floor:   #7b18e3; /* @px brand/LOGO PROPAD PNG.png 949,1948 */
+  --violet:  #5626fb; /* @px brand/LOGO PROPAD PNG...png 1077,731 */
+  --blue:    #0a4bfc; /* @px brand/LOGO PROPAD PNG...png 1072,921 */
+  --cyan:    #03a6fd; /* @px brand/LOGO PROPAD PNG...png 1100,865 */
+  --magenta: #d026fc; /* @px brand/LOGO PROPAD PNG...png 1176,1001 */
+  --lilac:   #c98ff5; /* @px reference/PROPAD 2.jpg.jpeg 1346,409 */
+  --ink:     #dfdcf7; /* @px reference/PROPAD 5.jpg.jpeg 116,41 */
+  --mist:    #b5ccf9; /* @px brand/LOGO PROPAD PNG...png 1005,1234 */
+}

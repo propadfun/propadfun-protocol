@@ -1,0 +1,16 @@
+{
+  "name": "propad",
+  "version": "1.0.0",
+  "description": "Propad - a level-start pad on Solana.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "gates": "node scripts/gates.mjs",
+    "serve": "node scripts/serve.mjs"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "sharp": "^0.35.5"
+  }
+}
